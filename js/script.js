@@ -70,3 +70,35 @@ document.querySelectorAll('.navbar a').forEach(link => {
         menuIcon.classList.remove('bx-x');
     });
 });
+
+/* ========================== SKILLS ENHANCEMENTS =============================================== */
+document.addEventListener('DOMContentLoaded', function() {
+    const skillItems = document.querySelectorAll('.skills li');
+    
+    skillItems.forEach(item => {
+        // Efeito de digitação para os títulos
+        const title = item.querySelector('.skill-title');
+        const originalText = title.textContent;
+        
+        item.addEventListener('mouseenter', function() {
+            title.style.color = 'var(--main-color)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            title.style.color = 'var(--text-color)';
+        });
+    });
+    
+    // Intersection Observer para animações
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    skillItems.forEach(item => {
+        observer.observe(item);
+    });
+});

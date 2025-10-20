@@ -1030,3 +1030,225 @@ img.loaded {
     }
 }
 
+/* === SKILLS COMPACT COM CENTRALIZAÇÃO === */
+.skills {
+    margin: 2rem 0;
+}
+
+.skills h4 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.skills ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.skills li {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza todo o conteúdo */
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    text-align: center; /* Centraliza texto */
+}
+
+.skills li:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--main-color);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* === SKILL HEADER CENTRALIZADO === */
+.skill-header {
+    display: flex;
+    flex-direction: column; /* Ícone acima do texto */
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.skill-main-icon {
+    font-size: 2rem; /* Um pouco maior para destaque */
+    color: var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.skills li:hover .skill-main-icon {
+    transform: scale(1.1);
+}
+
+.skill-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* === TECH CONTAINER CENTRALIZADO === */
+.tech-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    transition: all 0.3s ease;
+    min-width: 60px;
+}
+
+.tech-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* === TECH ICONS COMPACT === */
+.tech-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover .tech-icon {
+    transform: scale(1.1);
+}
+
+/* === CORES COMPACTAS === */
+.tech-icon.python {
+    background: linear-gradient(135deg, #3776AB, #306998);
+    color: white;
+}
+
+.tech-icon.php {
+    background: linear-gradient(135deg, #777BB4, #617CBE);
+    color: white;
+}
+
+.tech-icon.mysql {
+    background: linear-gradient(135deg, #00758F, #E48E00);
+    color: white;
+}
+
+.tech-icon.postgres {
+    background: linear-gradient(135deg, #336791, #2C5E85);
+    color: white;
+}
+
+.tech-icon.excel {
+    background: linear-gradient(135deg, #217346, #1D6F42);
+    color: white;
+}
+
+.tech-icon.powerbi {
+    background: linear-gradient(135deg, #F2C811, #E6B400);
+    color: #000;
+}
+
+.tech-icon.teaching {
+    background: linear-gradient(135deg, #8B5CF6, #7C3AED);
+    color: white;
+}
+
+.tech-icon.mentoring {
+    background: linear-gradient(135deg, #06B6D4, #0891B2);
+    color: white;
+}
+
+/* === TECH NAMES COMPACT === */
+.tech-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.tech-item:hover .tech-name {
+    color: var(--main-color);
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+    .skills ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .skills li {
+        padding: 1.2rem;
+        gap: 0.8rem;
+    }
+    
+    .skill-header {
+        gap: 0.4rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .skill-main-icon {
+        font-size: 1.8rem;
+    }
+    
+    .skill-title {
+        font-size: 1.3rem;
+    }
+    
+    .tech-container {
+        gap: 0.8rem;
+    }
+    
+    .tech-item {
+        min-width: 55px;
+        padding: 0.4rem;
+    }
+    
+    .tech-icon {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.4rem;
+    }
+    
+    .tech-name {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills h4 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .skill-main-icon {
+        font-size: 1.6rem;
+    }
+    
+    .skill-title {
+        font-size: 1.2rem;
+    }
+}
