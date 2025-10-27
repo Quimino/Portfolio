@@ -189,8 +189,8 @@ section {
 }
 
 .home-img img {
-    width: 35vw;
-    height: 35vw;
+    width: 30vw;
+    height: 30vw;
     max-width: 400px;
     max-height: 500px;
     animation: floatImage 4s ease-in-out infinite;
